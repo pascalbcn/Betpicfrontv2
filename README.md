@@ -14,10 +14,10 @@ Follow these instructions to install the app and run it with the data services:
 
 1. Clone the repository:
     ```
-    git clone https://github.com/TO_BE_COMPLETED
+    git clone https://github.com/Hack-X/ShowTonight
     ```
 
-1. Navigate to the `dreamhouse-mobile-ionic` directory :
+1. Navigate to the `ShowTonight` directory :
     ```
     cd showtonight
     ```
