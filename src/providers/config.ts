@@ -1,1 +1,1 @@
-export let SERVER_URL = "https://hackx-node.herokuapp.com/";
+export let SERVER_URL = "https://agile-ravine-88297.herokuapp.com/";
