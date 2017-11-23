@@ -1,33 +1,33 @@
 import {Component} from '@angular/core';
 import {ActionSheetController, ActionSheet, NavController, NavParams, ToastController} from 'ionic-angular';
-import {ShowService} from '../../providers/show-service-rest';
+import {GameService} from '../../providers/show-service-rest'; // changer ou pas?
 
 @Component({
-    selector: 'page-show-detail',
-    templateUrl: 'show-detail.html'
+    selector: 'game-show-detail',
+    templateUrl: 'game-detail.html'
 })
-export class ShowDetailPage {
+export class GameDetailPage {
 
-    show: any;
+    game: any;
 
-    constructor(public actionSheetCtrl: ActionSheetController, public navCtrl: NavController, public navParams: NavParams, public ShowService: ShowService, public toastCtrl: ToastController) {
+    constructor(public actionSheetCtrl: ActionSheetController, public navCtrl: NavController, public navParams: NavParams, public GameService: GameService, public toastCtrl: ToastController) {
         this.show = this.navParams.data;
-        ShowService.findById(this.show.id).then(
-            show => this.show = show
+        GameService.findById(this.game.id).then(
+            game => this.game = game
         );
-    }
-
-    favorite(show) {
-        this.ShowService.favorite(show)
-            .then(show => {
-                let toast = this.toastCtrl.create({
-                    message: 'Show added to your favorites',
-                    cssClass: 'mytoast',
-                    duration: 1000
-                });
-                toast.present(toast);
-            });
-    }
+    // }
+    //
+    // favorite(show) {
+    //     this.GameService.favorite(game)
+    //         .then(game => {
+    //             let toast = this.toastCtrl.create({
+    //                 message: 'Show added to your favorites',
+    //                 cssClass: 'mytoast',
+    //                 duration: 1000
+    //             });
+    //             toast.present(toast);
+    //         });
+    // }
 
     share(show) {
         let actionSheet: ActionSheet = this.actionSheetCtrl.create({
