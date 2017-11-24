@@ -5,12 +5,12 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import {WelcomePage} from '../pages/welcome/welcome';
-import {ShowListPage} from '../pages/show-list/show-list';
-import {ShowDetailPage} from '../pages/show-detail/show-detail';
+import {GameListPage} from '../pages/game-list/game-list';
+import {GameDetailPage} from '../pages/game-detail/game-detail';
 import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
 import {AboutPage} from '../pages/about/about';
 
-import {ShowService} from "../providers/show-service-rest";
+import {GameService} from "../providers/game-service-rest";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,8 +20,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     WelcomePage,
     AboutPage,
-    ShowListPage,
-    ShowDetailPage,
+    GameListPage,
+    GameDetailPage,
     FavoriteListPage
   ],
   imports: [
@@ -34,14 +34,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     WelcomePage,
     AboutPage,
-    ShowListPage,
-    ShowDetailPage,
+    GameListPage,
+    GameDetailPage,
     FavoriteListPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    ShowService,
+    GameService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
